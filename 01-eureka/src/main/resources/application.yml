@@ -1,0 +1,19 @@
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    #当前的服务是单机版的
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://root:root@localhost:8762/eureka/
+spring:
+  security:
+    user:
+      name: root
+      password: root
+  application:
+    name: eureka1
